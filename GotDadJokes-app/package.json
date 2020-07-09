@@ -1,0 +1,29 @@
+{
+  "name": "gotdadjokes-app",
+  "version": "1.0.0",
+  "description": "node app to handle the requests",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GotDadJoke/GotDadJokes.git"
+  },
+  "keywords": [
+    "dad",
+    "jokes",
+    "app"
+  ],
+  "author": "Yanilda P., Alyona K., Charles S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GotDadJoke/GotDadJokes/issues"
+  },
+  "homepage": "https://github.com/GotDadJoke/GotDadJokes#readme",
+  "dependencies": {
+    "bent": "^7.3.7",
+    "express": "^4.17.1"
+  }
+}
