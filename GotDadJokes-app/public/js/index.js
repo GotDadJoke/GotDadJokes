@@ -1,3 +1,5 @@
+//Currently not using the correct API. 
+//https://icanhazdadjoke.com/
 const api_url = 'https://sv443.net/jokeapi/v2/joke/Any'
 
 
