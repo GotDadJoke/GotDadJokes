@@ -16,9 +16,9 @@
 5. If in hosting service check: YOUR_URL:PORT  or YOUR_IP:PORT
 
 #### Check on browser
-- 127.0.0.1:55  for static page
-- 127.0.0.1:55/random for random joke
-- 127.0.0.1:55/test  just to test
+- 127.0.0.1:55   //for static page
+- 127.0.0.1:55/random  //for random joke
+- 127.0.0.1:55/test   //just to test
 
 ### Integration with Icanhazdadjokes API
 

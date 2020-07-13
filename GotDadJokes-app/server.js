@@ -60,6 +60,7 @@ app.get('/random', async function(req, res) {
 app.get('/test', function(req, res){
 	
 	res.sendFile(__dirname + '/public/index.html')
+	
 })
 
 
