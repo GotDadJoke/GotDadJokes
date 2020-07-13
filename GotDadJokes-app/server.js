@@ -54,7 +54,7 @@ app.get('/random', async function(req, res) {
 	var obj  = await getRadomJoke()
 	var joke = obj.joke
 	console.log(obj) 
-	res.send("Random Dad Joke: "+joke)
+	res.send(joke)
 })
 
 app.get('/test', function(req, res){

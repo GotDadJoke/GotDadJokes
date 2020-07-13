@@ -1,17 +1,11 @@
-//Currently not using the correct API. 
-//const api_url = 'https://icanhazdadjoke.com/'
-const api_url = 'https://sv443.net/jokeapi/v2/joke/Any'
+const api_url = '/random'
 
+function findDadJokes(){
 
-async function findDadJokes(){
+    fetch(api_url, { method: "get"})
+    .then(data => {return data.text()})
+    .then(res => {
+        document.getElementById('jokeLabelBtn').innerHTML = res 
+        console.log(res)})
 
-    const response = await fetch(api_url);
-    const data = await response.json();
-	console.log(data);
-	
-    if(!data.joke)
-        document.getElementById("jokeLabelBtn").innerHTML = data.setup +" "+ data.delivery;
-    else
-        document.getElementById("jokeLabelBtn").innerHTML = data.joke;
-    
 }
