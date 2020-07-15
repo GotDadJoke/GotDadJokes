@@ -7,5 +7,4 @@ function findDadJokes(){
     .then(res => {
         document.getElementById('jokeLabelBtn').innerHTML = res 
         console.log(res)})
-
 }
