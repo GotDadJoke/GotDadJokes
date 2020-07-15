@@ -11,7 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
     
 	<script src="js/index.js"></script>
-    <script type="text/javascript" src="../server.js"></script>
     
 </head>
     
@@ -24,15 +23,17 @@
 		<a href="index.html">About</a>
 	</nav>
 
-
-
-	<div style="overflow:auto">
+	<div class="mainbody"style="overflow:auto">
 		<div class="leftmenu">
-			<div class="menuitem">Most Popular</div>
-		  	<div class="menuitem">Dogs</div>
-		  	<div class="menuitem">Cat</div>
-		  	<div class="menuitem">Knock Knock</div>
-		  	<div class="menuitem">Single Line Jokes</div>
+			<button type="button" class="collapsible">Most Popular</button>
+			  <div class="content">
+					<div class="menuitem"> Popular</div>
+					<div class="menuitem">Dogs</div>
+					<div class="menuitem">Cat</div>
+					<div class="menuitem">Knock Knock</div>
+					<div class="menuitem">Single Line Jokes</div>
+					<div class="menuitem">Two Line Jokes</div>
+				</div>
 		</div>
 	  
 		<div class="main">
@@ -42,13 +43,33 @@
 				<label id="jokeLabelBtn" onclick="findDadJokes()">Loading...</label>
 			</div>
 		</div>
-	  
-	</div>
 
+		<div class="right">
+			<!-- left blank for future uses -->
+		</div>
+	</div>
 
 	<footer class="footer">
 		<p class="copyright">Codeday &copy;2020&trade;</p>
 	</footer>
+
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+	</script>
+
 </body>
 	
 </html>
