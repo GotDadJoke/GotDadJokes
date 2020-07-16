@@ -1,0 +1,93 @@
+#jokeLabelBtn {
+	display: block;
+	text-align: left;
+	height: 200px;
+	border-style: outset;
+	background-color: lightgray;
+	color: black;
+	font-weight: 600;
+	padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#jokeLabelBtn:hover {
+  border-style: inset;
+  background-color: gray;
+}
+
+.mainbody {
+  margin: 10px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.leftmenu {
+  float: left;
+  width: 20%;
+}
+
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid gray;
+}
+
+.menuitem:last-child {
+  border-bottom: none;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 10px;  
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  display: none;  
+  overflow: hidden;
+  background-color: #f1f1f1; 
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.right {
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .leftmenu, .main, .right {
+    width: 100%;
+  }
+}
