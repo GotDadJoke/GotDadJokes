@@ -2,7 +2,7 @@
 YP
 */
 const express = require('express') //web app framework
-	   , bent = require('bent') // importing bent mini 
+	   , bent = require('bent') // importing bent mini http client 
 
 
 
@@ -13,7 +13,7 @@ const app = express()
 app.use('/',express.static('public'))
 
 
-//client
+//client side
 function getRadomJoke(){
 
 	return getJSON(api_url)
@@ -35,9 +35,8 @@ function searchTerm(term){
 
 //get method route
 app.get('/random', async function(req, res) {  // routing 
-	var obj  = await getRadomJoke()
-	var joke = obj.joke
-	console.log(obj) 
+	let obj  = await getRadomJoke() // json object 
+	let joke = obj.joke
 	res.send(joke)
 })
 
