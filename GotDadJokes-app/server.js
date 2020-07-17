@@ -1,67 +1,51 @@
 /*
-	NodeJs app using Express
+YP
 */
-const express = require('express')
-		  , path = require('path')
-		  , bent = require('bent')
-
-const getJSON = bent('json')
+const express = require('express') //web app framework
+	   , bent = require('bent') // importing bent mini 
 
 
-var app = express()
+
+const getJSON = bent('json')    //using bent to get json objects from API
+const api_url = 'https://icanhazdadjoke.com/' //  Public API for dad Jokes
+const app = express()
 
 app.use('/',express.static('public'))
 
-// Client side
-async function getRadomJoke(){
-	let obj 
 
-	try {
-		obj= await getJSON('https://icanhazdadjoke.com/')	
-	}
-	catch (e){}
+//client
+function getRadomJoke(){
+
+	return getJSON(api_url)
+
+}
+
+function searchAll(){
+
+	return getJSON(api_url+'search/')
 	
-	return obj
 }
 
-async function searchAll(){
+function searchTerm(term){
 
-	let obj
+ 	return getJSON(api_url+'/search?term='+term)
 
-	try{
-		obj = await getJSON('https://icanhazdadjoke.com/search/')
-	}
-	catch(e){}
-
-	return obj
-}
-
-async function searchTerm(term){
-
-	let obj 
-
-	try{
-		obj = await getJSON('https://icanhazdadjoke.com/search?term='+term)
-	}
-	catch(e){}
-
-	return obj
 }
 
 
-//Service Side
-app.get('/random', async function(req, res) {
+//get method route
+app.get('/random', async function(req, res) {  // routing 
 	var obj  = await getRadomJoke()
 	var joke = obj.joke
 	console.log(obj) 
 	res.send(joke)
 })
 
-app.get('/test', function(req, res){
+/*app.get('/test', function(req, res){
 	
 	res.sendFile(__dirname + '/public/index.html')
 	
-})
+})*/
 
 
 app.listen(55,() => console.log('Listening on: 55'))
