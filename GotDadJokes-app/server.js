@@ -22,13 +22,13 @@ function getRadomJoke(){
 
 function searchAll(){
 
-	return getJSON(api_url+'search/')
+	return getJSON(api_url+'search')
 	
 }
 
 function searchTerm(term){
 
- 	return getJSON(api_url+'/search?term='+term)
+ 	return getJSON(api_url+'search?term='+term)
 
 }
 
