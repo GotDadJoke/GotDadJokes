@@ -24,7 +24,7 @@
   "homepage": "https://github.com/GotDadJoke/GotDadJokes#readme",
   "dependencies": {
     "bent": "^7.3.7",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "node-fetch": "^2.6.0"
   }
 }
